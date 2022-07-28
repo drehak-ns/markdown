@@ -24,6 +24,7 @@
 \let\oldCodelineNo\theCodelineNo
 \def\theCodelineNo{\textcolor[gray]{0.5}{\oldCodelineNo}}
 \makeatletter\renewcommand\fps@figure{htbp}\makeatother
+% TODO replace with l3keys functions
 \setkeys{Gin}{
   width = \columnwidth,
   height = 0.65\paperheight,
@@ -14641,6 +14642,7 @@ pdflatex --shell-escape document.tex
 % \markdownEnd
 %  \begin{macrocode}
 \newcommand\markdownSetup[1]{%
+% TODO replace with l3keys functions
   \setkeys{markdownOptions}{#1}}%
 %    \end{macrocode}
 % \begin{markdown}
@@ -14864,6 +14866,7 @@ would use the following code in the preamble of your document:
 \AtEndOfPackage{\markdownLaTeXLoadedtrue}
 \ExplSyntaxOn
 \tl_new:N \markdownLaTeXThemePackageName
+% TODO replace with l3keys functions
 \define@key{markdownOptions}{theme}{%
   \str_if_in:NnF
     { #1 }
@@ -14910,6 +14913,7 @@ beginning of a \LaTeX{} document.
 %<*latex>
 % \fi
 %  \begin{macrocode}
+% TODO replace with l3keys functions
 \@onlypreamble\KV@markdownOptions@theme
 %    \end{macrocode}
 % \iffalse
@@ -14929,6 +14933,7 @@ Example themes provided with the Markdown package include:
 %    ```` tex
 %    \documentclass{article}
 %    \usepackage[theme=witiko/dot]{markdown}
+%    TODO replace with l3keys functions
 %    \setkeys{Gin}{
 %      width = \columnwidth,
 %      height = 0.65\paperheight,
@@ -15002,6 +15007,7 @@ following content:
 ```` tex
 \documentclass{article}
 \usepackage[theme=witiko/dot]{markdown}
+% TODO replace with l3keys functions
 \setkeys{Gin}{
   width=\columnwidth,
   height=0.65\paperheight,
@@ -15201,6 +15207,7 @@ various options locally.
 %<*latex>
 % \fi
 %  \begin{macrocode}
+% TODO replace with l3keys functions
 \define@key{markdownOptions}{snippet}{%
   \markdownIfSnippetExists{#1}%
     {%
@@ -15292,6 +15299,7 @@ The following ordered list will be preceded by roman numerals:
           }
       }
   }
+% TODO replace with l3keys functions
 \cs_new:Nn \@@_latex_define_option_keyval:nn
   {
     \prop_get:cnN
@@ -15415,6 +15423,7 @@ The following ordered list will be preceded by roman numerals:
         \tl_tail:n { #1 }
       }
   }
+% TODO replace with l3keys functions
 \cs_new:Nn \@@_latex_define_renderer:nNn
   {
     \define@key
@@ -15478,6 +15487,7 @@ The following ordered list will be preceded by roman numerals:
       { \l_tmpa_tl }
       \l_tmpb_tl
   }
+% TODO replace with l3keys functions
 \cs_new:Nn \@@_latex_define_renderer_prototype:nNn
   {
     \define@key
@@ -22972,6 +22982,7 @@ end
 %
 % \end{markdown}
 %  \begin{macrocode}
+% TODO replace with l3keys functions
 \define@key{markdownOptions}{renderers}{%
   \setkeys{markdownRenderers}{#1}%
   \def\KV@prefix{KV@markdownOptions@}}%
